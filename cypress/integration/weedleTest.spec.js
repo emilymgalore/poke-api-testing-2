@@ -8,7 +8,7 @@ describe("Validate key information about Weedle From The Pokemon API", () => {
         cy.get("@weedle")
             .its("headers")
             .its("content-type")
-            .should("equal", "application/json; charset=utf-8")
+            .should("contain", "application/json; charset=utf-8")
     })
 
     it("Validate the status code", () => {
@@ -82,11 +82,11 @@ describe("Validate key information about Weedle From The Pokemon API", () => {
     })
 
     it("validates fifth stat of base stats", () => {
-        const TWENTY = 20
+        const FIFTY = 50
 
         cy.get("@weedle")
-            .its("body.stats.4.base_stat")
-            .should("equal", TWENTY)
+            .its("body.stats.5.base_stat")
+            .should("equal", FIFTY)
     })
 
     it("validates order", () => {

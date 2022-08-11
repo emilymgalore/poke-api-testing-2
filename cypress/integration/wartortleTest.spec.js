@@ -8,7 +8,7 @@ describe("Validates Key Information About Wartortle From The Pokemon API", () =>
         cy.get("@wartortle")
             .its("headers")
             .its("content-type")
-            .should("equal", "application/json; charset=utf-8")
+            .should("contain", "application/json; charset=utf-8")
     })
 
     it("Validate that the request response was successful, using the status code", () => {
